@@ -1,0 +1,405 @@
+/* Existing CSS rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #1a1a2e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ddd;
+}
+
+header img {
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f39c12;
+}
+
+.menu-icon img {
+    width: 30px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero .profile-img img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #f39c12;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.read-more-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+}
+
+.about-content h2 span {
+    color: #f39c12;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+/* New sections */
+.education{
+    text-align: center;
+    padding: 0px;
+} 
+
+.interest-hobbies {
+    text-align: center;
+    padding: 0px;
+    background-color: #d6690f;
+}
+
+.education h2{
+    font-size: 2.5rem;
+}
+.interest-hobbies h2 {
+    font-size: 2.5rem;
+}
+
+.education h2 span {
+    color: #f39c12;
+}
+.interest-hobbies h2 span {
+    color: #f39c12;
+}
+
+.services {
+    text-align: center;
+    padding: 50px;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+}
+
+.services h2 span {
+    color: #f39c12;
+}
+
+.services p {
+    color: #777;
+    margin-top: 20px;
+}
+
+.portfolio {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+}
+
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background-color: #1a1a2e;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.resume-grid {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.resume-card {
+    max-width: 400px; /* Set a max-width to control the card size */
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resume {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.resume h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+.resume-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #040737;
+    position: relative;
+}
+
+.resume-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+   
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ 
+}
+
+.timeline-item span {
+    color: #d6690f;
+    font-weight: bold;
+}
+
+.timeline-item h4 {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+    color: #060000;
+}
+
+
+.interests {
+    max-width: 1515px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+
+
+}
+
+.interests h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 72px;
+  
+
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 0px;
+    text-align: center;
+}
+
+.card-content h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.location-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.map-container {
+    width: 50%;
+}
+
+.location-info {
+    width: 50%;
+    padding: 20px;
+    color:#ffffff;
+    
+
+}
+
+.location-info h2 {
+    margin-bottom: 20px;
+}
+
+.location-info p {
+    margin-bottom: 10px;
+}
+
+.pro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #d6690f;
+   
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.content p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #666;
+}
+
