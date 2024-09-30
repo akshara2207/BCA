@@ -1,0 +1,380 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #181818;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    background-image: url('mithun.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact {
+    font-size: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #87CEEB;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-buttons button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta-buttons button:last-child {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.details .detail-item p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.details .detail-item span {
+    font-size: 1.2rem;
+}
+
+/* Reasons Section */
+.reasons {
+    padding: 60px 0;
+    background-color: #101010;
+}
+
+.reasons h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.reason-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.reason-card {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 23%;
+}
+
+.reason-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #87CEEB;
+}
+
+.reason-card p {
+    font-size: 1rem;
+}
+
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.about-card {
+    display: flex;
+    background-color:#181818;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Slide In Animations */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.left-section {
+    background-color: #00bcd4;
+    padding: 30px;
+    color: white;
+    width: 35%;
+    text-align: center;
+    animation: slideInLeft 1s forwards;
+}
+
+.right-section {
+    padding: 110px;
+    width: 60%;
+    color: #ffffff;
+    animation: slideInRight 1s forwards;
+}
+
+/* Styling for the Profile Image */
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.left-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Right Section Styling */
+.right-section{
+    background-color: #181818;
+}
+.right-section h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.right-section p {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+.image-credit {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #888;
+}
+
+.image-credit a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+
+#education {
+    padding: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #6c5ce7;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+}
+
+.timeline-content {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 40px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    color: #b2bec3;
+}
+
+.timeline-item h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.timeline-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #dfe6e9;
+}
+
+.timeline-item .description {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #b2bec3;
+}
+
+@media (max-width: 768px) {
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-dot {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.interests {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.interests h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #8c5353;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+}
