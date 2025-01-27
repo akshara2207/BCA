@@ -1,0 +1,23 @@
+Input:
+
+Read the number of elements n.
+Read the n elements into an array.
+Read the value search to find in the array.
+
+Initialization:
+
+Set first = 0 (index of the first element).
+Set last = n - 1 (index of the last element).
+Calculate middle = (first + last) / 2 (the middle index).
+
+Binary Search Loop:
+
+While first <= last, repeat the following steps:
+If array[middle] < search, update first = middle + 1 (search the right half).
+If array[middle] == search, print "search found at location middle + 1" and exit the loop.
+If array[middle] > search, update last = middle - 1 (search the left half).
+Recalculate middle = (first + last) / 2.
+
+Termination:
+
+If first > last, print "Not found! search is not present in the list."
