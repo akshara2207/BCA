@@ -1,0 +1,139 @@
+#include <stdio.h>
+#define MAX 5  // Maximum size of the stack
+
+int stack[MAX];
+int top = -1;  // Initialize top as -1 to indicate an empty stack
+
+// Function to check if the stack is full
+int isFull() {
+    return top == MAX - 1;
+}
+
+// Function to check if the stack is empty
+int isEmpty() {
+    return top == -1;
+}
+
+// Function to push an element onto the stack
+void push(int value) {
+    if (isFull()) {
+        printf("Stack Overflow\n");
+    } else {
+        stack[++top] = value;
+        printf("%d pushed onto the stack\n", value);
+    }
+}
+
+// Function to pop an element from the stack
+int pop() {
+    if (isEmpty()) {
+        printf("Stack Underflow\n");
+        return -1;
+    } else {
+        return stack[top--];
+    }
+}
+
+// Function to view the top element of the stack
+int peek() {
+    if (isEmpty()) {
+        printf("Stack is empty\n");
+        return -1;
+    } else {
+        return stack[top];
+    }
+}
+
+// Main function to test stack operations with user input
+int main() {
+    int choice, value;
+    
+    while (1) {
+        // Display menu for the user
+        printf("\nStack Operations Menu:\n");
+        printf("1. Push\n");
+        printf("2. Pop\n");
+        printf("3. Peek\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        switch (choice) {
+            case 1:
+                // Push operation
+                if (isFull()) {
+                    printf("Stack is full! Cannot push.\n");
+                } else {
+                    printf("Enter value to push: ");
+                    scanf("%d", &value);
+                    push(value);
+                }
+                break;
+            case 2:
+                // Pop operation
+                value = pop();
+                if (value != -1) {
+                    printf("%d popped from the stack\n", value);
+                }
+                break;
+            case 3:
+                // Peek operation
+                value = peek();
+                if (value != -1) {
+                    printf("Top element is %d\n", value);
+                }
+                break;
+            case 4:
+                // Exit operation
+                printf("Exiting program...\n");
+                return 0;
+            default:
+                printf("Invalid choice! Please enter a valid option.\n");
+        }
+    }
+    return 0;
+}
+
+Output
+Stack Operations Menu:
+1. Push
+2. Pop
+3. Peek
+4. Exit
+Enter your choice: 1
+Enter value to push: 10
+10 pushed onto the stack
+
+Stack Operations Menu:
+1. Push
+2. Pop
+3. Peek
+4. Exit
+Enter your choice: 1
+Enter value to push: 20
+20 pushed onto the stack
+
+Stack Operations Menu:
+1. Push
+2. Pop
+3. Peek
+4. Exit
+Enter your choice: 3
+Top element is 20
+
+Stack Operations Menu:
+1. Push
+2. Pop
+3. Peek
+4. Exit
+Enter your choice: 2
+20 popped from the stack
+
+Stack Operations Menu:
+1. Push
+2. Pop
+3. Peek
+4. Exit
+Enter your choice: 4
+Exiting program...
+
