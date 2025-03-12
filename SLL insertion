@@ -1,0 +1,122 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to insert a new node at the end
+void insertEnd(struct Node** head, int data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = NULL;
+
+    if (*head == NULL) {
+        *head = new_node;
+    } else {
+        struct Node* temp = *head;
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        temp->next = new_node;
+    }
+}
+
+// Function to insert at the beginning
+void insertBeginning(struct Node** head, int data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = *head;
+    *head = new_node;
+}
+
+// Function to insert at a specific position
+void insertAtPosition(struct Node** head, int data, int position) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+
+    if (position == 1) {
+        new_node->next = *head;
+        *head = new_node;
+        return;
+    }
+
+    struct Node* temp = *head;
+    for (int i = 1; temp != NULL && i < position - 1; i++) {
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Position out of range. Inserting at the end.\n");
+        insertEnd(head, data);
+    } else {
+        new_node->next = temp->next;
+        temp->next = new_node;
+    }
+}
+
+// Function to display the linked list
+void display(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+// Main function
+int main() {
+    struct Node* head = NULL;
+    int i, value, pos;
+
+    // Insert 5 elements from user input at the end
+    printf("Enter 5 elements to insert at the end:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &value);
+        insertEnd(&head, value);
+    }
+
+    // Display initial list
+    printf("Linked List after inserting at the end: ");
+    display(head);
+
+    // Insert at the beginning
+    printf("Enter an element to insert at the beginning: ");
+    scanf("%d", &value);
+    insertBeginning(&head, value);
+    printf("Linked List after inserting at the beginning: ");
+    display(head);
+
+    // Insert at a specific position
+    printf("Enter an element to insert at a specific position: ");
+    scanf("%d", &value);
+    printf("Enter the position: ");
+    scanf("%d", &pos);
+    insertAtPosition(&head, value, pos);
+    printf("Linked List after inserting at position %d: ", pos);
+    display(head);
+
+    return 0;
+}
+
+
+output
+
+Enter 5 elements to insert at the end:
+Enter element 1: 10
+Enter element 2: 20
+Enter element 3: 30
+Enter element 4: 40
+Enter element 5: 50
+Linked List after inserting at the end: 10 -> 20 -> 30 -> 40 -> 50 -> NULL
+
+Enter an element to insert at the beginning: 5
+Linked List after inserting at the beginning: 5 -> 10 -> 20 -> 30 -> 40 -> 50 -> NULL
+
+Enter an element to insert at a specific position: 25
+Enter the position: 3
+Linked List after inserting at position 3: 5 -> 10 -> 25 -> 20 -> 30 -> 40 -> 50 -> NULL
