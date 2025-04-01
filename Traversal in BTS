@@ -87,3 +87,15 @@ int main() {
 
     return 0;
 }
+
+Enter the number of elements: 5
+Enter 5 elements: 50 30 70 20 40
+       50
+      /  \
+    30    70
+   /  \
+  20   40
+Preorder traversal: 50 30 20 40 70
+Inorder traversal: 20 30 40 50 70
+Postorder traversal: 20 40 30 70 50
+
