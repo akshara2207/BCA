@@ -1,7 +1,7 @@
 •	To Connect Git And GitHub 
 In Git
-$git config --golbal user.name "name of your github account"
-$git config --golbal user.email "email of your github account"
+$git config --global user.name "name of your github account"
+$git config --global user.email "email of your github account"
 
 •	To connect git with github
 Get SSH Key
